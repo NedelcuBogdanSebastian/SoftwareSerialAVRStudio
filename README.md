@@ -1,1 +1,1 @@
-![display](Images/SistemAchizitie.png)
+![display](Images/SistemAchizitieATmega328.png)
