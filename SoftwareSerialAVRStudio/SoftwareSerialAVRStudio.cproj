@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>{c84ad402-cc66-423c-8c7d-583e78b208ec}</ProjectGuid>
+    <avrdevice>ATmega328P</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>SoftwareSerialAVRStudio</AssemblyName>
+    <Name>SoftwareSerialAVRStudio</Name>
+    <RootNamespace>SoftwareSerialAVRStudio</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.21.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../modbus</Value>
+      <Value>../modbus/functions</Value>
+      <Value>../modbus/include</Value>
+      <Value>../modbus/port</Value>
+      <Value>..</Value>
+      <Value>../modbus/tcp</Value>
+      <Value>../modbus/rtu</Value>
+      <Value>../modbus/ascii</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+  <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+</AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="main.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\ascii\mbascii.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\ascii\mbascii.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\functions\mbfunccoils.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\functions\mbfuncdiag.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\functions\mbfuncdisc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\functions\mbfuncholding.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\functions\mbfuncinput.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\functions\mbfuncother.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\functions\mbutils.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\include\mb.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\include\mbconfig.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\include\mbframe.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\include\mbfunc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\include\mbport.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\include\mbproto.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\include\mbutils.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\mb.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\port\port.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\port\port.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\port\portevent.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\port\portserial.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\port\porttimer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\rtu\mbcrc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\rtu\mbcrc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\rtu\mbrtu.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\rtu\mbrtu.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\tcp\mbtcp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="modbus\tcp\mbtcp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SoftwareSerialAVRStudio.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="modbus" />
+    <Folder Include="modbus\functions" />
+    <Folder Include="modbus\include" />
+    <Folder Include="modbus\ascii" />
+    <Folder Include="modbus\rtu" />
+    <Folder Include="modbus\tcp" />
+    <Folder Include="modbus\port" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
